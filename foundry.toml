@@ -1,0 +1,10 @@
+[profile.default]
+src = 'contracts'
+out = 'out'
+
+fs_permissions = [{ access = "read-write", path = "./"}]
+
+[invariant]
+runs = 2000
+depth = 20
+fail_on_revert = false
