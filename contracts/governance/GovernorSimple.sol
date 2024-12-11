@@ -340,8 +340,7 @@ abstract contract GovernorSimple is ERC2771Context, ERC165, EIP712, IGovernor, I
 
         ProposalState status = state(proposalId);
         require(
-            status == ProposalState.Succeeded || status == ProposalState.Defeated || status == ProposalState.Expired,
-            "GovernorSimple: proposal not successful"
+            status == ProposalState.Succeeded, "GovernorSimple: proposal not successful"
         );
         _proposals[proposalId].executed = true;
 
